@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+protocol DataManagerProtocol {
+    func fetchUsers(completion: @escaping ([User]?, Error?) -> Void)
+}
+
+class DataManager: DataManagerProtocol {
+    func fetchUsers(completion: @escaping ([User]?, Error?) -> Void) {
+        // Code to fetch users from API goes here
+    }
+}
